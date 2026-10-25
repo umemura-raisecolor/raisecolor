@@ -50,3 +50,15 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){g.classList.add('pf-in');io.unobserve(g);}});},{threshold:.25});
   io.observe(g);
 })();
+
+/* トップ写真のスライド切り替え */
+(function(){
+  var imgs=document.querySelectorAll('.hero-slide'),dots=document.querySelectorAll('.hero-dots span');
+  if(imgs.length<2)return;
+  var i=0;
+  setInterval(function(){
+    imgs[i].classList.remove('is-active');if(dots[i])dots[i].classList.remove('is-active');
+    i=(i+1)%imgs.length;
+    imgs[i].classList.add('is-active');if(dots[i])dots[i].classList.add('is-active');
+  },5000);
+})();
