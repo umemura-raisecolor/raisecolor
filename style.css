@@ -427,3 +427,9 @@ td:last-child{font-weight:700;color:var(--navy);white-space:nowrap}
 .hero-dots span{width:26px;height:3px;background:rgba(255,255,255,.55);transition:background .4s,width .4s}
 .hero-dots span.is-active{background:var(--orange);width:40px}
 @media(max-width:780px){.hero-dots{left:16px;bottom:22px}}
+
+.work-points{list-style:none;padding:0;margin:0 0 22px;border-top:1px solid var(--line)}
+.work-points li{position:relative;font-size:13px;font-weight:600;padding:9px 0 9px 24px;border-bottom:1px solid var(--line)}
+.work-points li::before{content:"✓";position:absolute;left:2px;top:9px;color:var(--orange);font-weight:800}
+.work-feature .work-info>p:not(.work-client){margin-bottom:14px}
+.work-feature .work-image img{object-position:left top}
