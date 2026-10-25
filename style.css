@@ -398,3 +398,4 @@ td:last-child{font-weight:700;color:var(--navy);white-space:nowrap}
 .numbers b .cnt{font-size:inherit;color:inherit;font-family:inherit}
 .cta-band.cta-photo .cta-inner{flex-direction:column;align-items:flex-start;max-width:640px;margin-left:max(24px,calc((100% - 1160px)/2))}
 .cta-band.cta-photo .container{width:auto}
+.price small{display:inline-block;white-space:nowrap;margin-left:4px}
