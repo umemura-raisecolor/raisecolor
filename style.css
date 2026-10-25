@@ -396,7 +396,7 @@ td:last-child{font-weight:700;color:var(--navy);white-space:nowrap}
     }
 
 .numbers b .cnt{font-size:inherit;color:inherit;font-family:inherit}
-.cta-band.cta-photo .cta-inner{flex-direction:column;align-items:flex-start;max-width:640px;margin-left:max(24px,calc((100% - 1160px)/2))}
-.cta-band.cta-photo .container{width:auto}
+.cta-band.cta-photo .cta-inner{flex-direction:column;align-items:center;text-align:center;gap:28px}
+.cta-band.cta-photo .cta-points{justify-content:center}
 .price small{display:inline-block;white-space:nowrap;margin-left:4px}
 .price small{display:block;margin:2px 0 0;line-height:1.6}
