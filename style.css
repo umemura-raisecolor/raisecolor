@@ -400,3 +400,15 @@ td:last-child{font-weight:700;color:var(--navy);white-space:nowrap}
 .cta-band.cta-photo .cta-points{justify-content:center}
 .price small{display:inline-block;white-space:nowrap;margin-left:4px}
 .price small{display:block;margin:2px 0 0;line-height:1.6}
+
+/* 実案件(大きめ横長カード) */
+.work-feature{display:grid;grid-template-columns:1.15fr .85fr;border:1px solid var(--line);background:#fff;margin-bottom:28px;border-top:4px solid var(--orange)}
+.work-feature>*{min-width:0}
+.work-feature .work-image img{height:100%;aspect-ratio:16/10;object-position:top}
+.work-feature .work-info{padding:34px 36px;justify-content:center}
+.work-feature h3{font-family:var(--serif);font-size:24px;margin-bottom:12px}
+.work-feature .work-info>p:not(.work-client){font-size:14px;line-height:2.1;flex:0 0 auto;margin-bottom:22px}
+.work-client{font-size:12px;font-weight:800;color:var(--navy);letter-spacing:.06em;margin:4px 0 4px}
+.work-image>.client-tag{background:var(--orange);color:#fff}
+.work-feature:hover .work-image img{transform:scale(1.04)}
+@media(max-width:960px){.work-feature{grid-template-columns:1fr}.work-feature .work-info{padding:24px}}
