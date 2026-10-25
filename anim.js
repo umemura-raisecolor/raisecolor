@@ -4,7 +4,7 @@
   var hd=document.querySelector('.site-header');
   function sc(){if(hd)hd.classList.toggle('rc-scrolled',window.scrollY>20);}
   window.addEventListener('scroll',sc,{passive:true});sc();
-  var groups=[['.section-heading','',false],['.trust-intro','rv-l',false],['.trust-item','',true],['.service-card','',true],['.feature-copy','rv-r',false],['.feature-visual .stack','rv-l',false],['.check-list li','',true],['.work-card','',true],['.work-feature','',false],['.process-step','',true],['.price-box','',true],['.cta-inner','',false],['.worry-photo','rv-l',false],['.worry-copy','rv-r',false],['.worry-list li','',true],['.message-copy','rv-l',false],['.message-photo','rv-r',false],['.about-grid,.profile,.page-hero .container,.content-block,.faq-item,.plan,.contact-grid > *,.info-table','',true],['.story > p','',false],['.fact','',true],['.policy-item','',true],['.personal','',false]];
+  var groups=[['.section-heading','',false],['.trust-intro','rv-l',false],['.trust-item','',true],['.service-card','',true],['.feature-copy','rv-r',false],['.feature-visual .stack','rv-l',false],['.check-list li','',true],['.work-card','',true],['.work-feature','',false],['.price-box','',true],['.cta-inner','',false],['.worry-photo','rv-l',false],['.worry-copy','rv-r',false],['.worry-list li','',true],['.message-copy','rv-l',false],['.message-photo','rv-r',false],['.about-grid,.profile,.page-hero .container,.content-block,.faq-item,.plan,.contact-grid > *,.info-table','',true],['.story > p','',false],['.fact','',true],['.policy-item','',true],['.personal','',false]];
   var els=[];
   groups.forEach(function(g){var list=document.querySelectorAll(g[0]);list.forEach(function(el,i){if(el.closest('.hero')||el.closest('.rep-hero'))return;el.classList.add('rv');if(g[1])el.classList.add(g[1]);if(g[2])el.style.setProperty('--n',i%5);els.push(el);});});
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
@@ -31,11 +31,22 @@
   if(!tls.length)return;
   var still=matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window);
   tls.forEach(function(tl){
-    tl.classList.add('tl-flow');
+    tl.classList.add('tl-flow','pf-init');void tl.offsetWidth;requestAnimationFrame(function(){requestAnimationFrame(function(){tl.classList.remove('pf-init');});});
     tl.querySelectorAll(':scope>li').forEach(function(li,i){li.style.setProperty('--i',i);});
     if(still)tl.classList.add('tl-in');
   });
   if(still)return;
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('tl-in');io.unobserve(e.target);}});},{threshold:.2,rootMargin:'0px 0px -60px 0px'});
   tls.forEach(function(tl){io.observe(tl);});
+})();
+
+/* 制作の流れ:左から右へ、線が伸びてSTEPが順番に流れて出る */
+(function(){
+  var g=document.querySelector('.process-grid');
+  if(!g)return;
+  g.classList.add('pf','pf-init');void g.offsetWidth;requestAnimationFrame(function(){requestAnimationFrame(function(){g.classList.remove('pf-init');});});
+  g.querySelectorAll('.process-step').forEach(function(s,i){s.style.setProperty('--i',i);});
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches||!('IntersectionObserver' in window)){g.classList.add('pf-in');return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){g.classList.add('pf-in');io.unobserve(g);}});},{threshold:.25});
+  io.observe(g);
 })();
