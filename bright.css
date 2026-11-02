@@ -1,0 +1,208 @@
+/* =========================================================
+   明るいデザイン(2026-11)
+   暗い紺の面をなくして、白・やわらかい光・ロゴのピーチ〜ゴールドで
+   立体感と透明感を出すための上書きスタイル
+   ========================================================= */
+:root{
+  --ink:#24343f;
+  --muted:#5d6b74;
+  --line:#e8ecee;
+  --orange:#ec6f45;
+  --peach:#f7a46c;
+  --peach2:#f59a5f;
+  --cream:#fff8f3;
+  --sky:#eef6fa;
+  --blue:#2f7ea3;
+  --grad:linear-gradient(120deg,#ee7148 0%,#f5995f 55%,#f4bd72 100%);
+  --grad-soft:linear-gradient(135deg,#fff1e8 0%,#fff8f2 45%,#eaf4f9 100%);
+  --shadow:0 18px 44px rgba(36,64,84,.09);
+  --shadow-s:0 8px 24px rgba(36,64,84,.07);
+  --r:16px;
+}
+body{background:#fffdfb}
+
+/* ---------- 上の帯・ヘッダー ---------- */
+.topbar{background:linear-gradient(90deg,#fde4d4 0%,#fff1e4 50%,#e4f1f8 100%);color:var(--ink)}
+.topbar-note{color:var(--orange);font-weight:700}
+.site-header{background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 4px 24px rgba(36,64,84,.06)}
+.nav-cta{background:var(--grad);border-radius:40px;box-shadow:0 8px 20px rgba(238,113,72,.3)}
+
+/* ---------- ボタン ---------- */
+.button{border-radius:40px;overflow:hidden;position:relative}
+.button-primary{background:var(--grad);box-shadow:0 12px 28px rgba(238,113,72,.32)}
+.button-primary:hover{background:var(--grad);box-shadow:0 16px 34px rgba(238,113,72,.42)}
+.button-dark{background:linear-gradient(120deg,#2f7ea3,#4aa5c6);box-shadow:0 12px 28px rgba(47,126,163,.28)}
+.button-ghost{border:1.5px solid rgba(36,52,63,.22);color:var(--ink);background:rgba(255,255,255,.7)}
+.button-line{border-color:rgba(36,52,63,.25)}
+
+/* ---------- トップのファーストビュー ---------- */
+.hero{background:
+  radial-gradient(circle at 8% 12%,rgba(253,214,190,.9) 0,transparent 38%),
+  radial-gradient(circle at 48% 96%,rgba(214,236,246,.95) 0,transparent 42%),
+  radial-gradient(circle at 42% 30%,rgba(255,236,206,.7) 0,transparent 30%),
+  #fffaf6;color:var(--ink)}
+.hero::after{background:radial-gradient(circle,rgba(247,164,108,.28),transparent 65%)!important}
+.hero::before{content:"";position:absolute;width:380px;height:380px;left:34%;top:56%;border-radius:50%;background:radial-gradient(circle,rgba(120,190,220,.22),transparent 65%);pointer-events:none;animation:rcDrift 14s ease-in-out infinite alternate-reverse}
+.eyebrow{color:var(--muted)}
+.eyebrow span{background:var(--grad)}
+.hero h1 em{color:var(--orange)}
+.hero-lead{color:#4b5a64}
+.hero-points{border-top-color:rgba(36,52,63,.14)}
+.hero-points div{color:var(--ink);background:rgba(255,255,255,.75);padding:7px 14px 7px 10px;border-radius:30px;box-shadow:var(--shadow-s)}
+.hero-points{gap:10px 12px;border-top:0;padding-top:0;margin-top:44px}
+.hero-points b{color:var(--orange)}
+.hero-photo{padding:28px 28px 28px 0}
+.hero-slides{inset:28px 28px 28px 0!important;border-radius:28px 28px 28px 120px;box-shadow:0 30px 60px rgba(36,64,84,.18)}
+.hero-photo::before,
+.hero-photo::before{background:none!important}
+.hero-photo figcaption{border-radius:14px;border-left:0;box-shadow:var(--shadow);right:48px;bottom:52px}
+.hero-dots{left:34px;bottom:54px}
+.hero-dots span{background:rgba(255,255,255,.75)}
+.hero-dots span.is-active{background:var(--orange)}
+
+/* ---------- 下層ページの見出し ---------- */
+.page-hero{background:
+  radial-gradient(circle at 10% 0%,rgba(253,214,190,.85) 0,transparent 40%),
+  radial-gradient(circle at 85% 100%,rgba(214,236,246,.95) 0,transparent 45%),
+  #fffaf6;color:var(--ink)}
+.page-hero::after{color:rgba(238,113,72,.08)}
+.page-hero h1 em{color:var(--orange)}
+.page-hero p{color:#4b5a64}
+.breadcrumb{color:var(--muted)}
+.breadcrumb a:hover{color:var(--orange)}
+
+/* 代表紹介のトップ */
+.rep-hero{color:var(--ink)!important}
+.rep-hero::after{background:linear-gradient(120deg,rgba(255,248,242,.93) 0%,rgba(255,243,234,.88) 55%,rgba(232,243,249,.86) 100%)!important}
+.rep-hero .glass{background:rgba(255,255,255,.62);border-color:rgba(255,255,255,.9);box-shadow:var(--shadow)}
+.rep-hero .glass .section-kicker{color:var(--orange)}
+.rep-hero .glass .role{color:var(--muted)}
+.rep-hero .glass .thesis em{color:var(--orange)}
+.rep-hero .breadcrumb a,.rep-hero .breadcrumb{color:var(--muted)}
+.rep-stamp{background:var(--grad)!important;box-shadow:0 10px 24px rgba(238,113,72,.35)!important}
+
+/* ---------- 安心ポイントの帯 ---------- */
+.trust-strip{background:#fff;border-bottom:0;box-shadow:0 10px 30px rgba(36,64,84,.05);position:relative;z-index:1}
+.trust-icon{background:var(--grad);color:#fff;border:0}
+
+/* ---------- 見出しまわり ---------- */
+.section-kicker,.mini-label{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+.section{position:relative}
+.section.cream{background:var(--grad-soft)}
+
+/* ---------- カード全般:角丸と影で立体感 ---------- */
+.service-card,.work-card,.work-feature,.svc-box,.price-box,.contact-card,.policy-item,.fact,.personal,.table-wrap{border-radius:var(--r);overflow:hidden;border-color:#eef1f2;box-shadow:var(--shadow-s)}
+.service-card:hover,.work-card:hover{box-shadow:var(--shadow)}
+.service-card .thumb,.work-image{background:linear-gradient(135deg,#fde7da,#e7f2f8)}
+.service-card .thumb.phone{background:radial-gradient(circle at 70% 20%,#ffffff 0,#fde5d6 45%,#e3f0f7 100%)}
+.service-card .thumb.phone img{border-color:#24343f}
+.work-feature{border-top:0}
+.work-image>.client-tag,.work-mock .client-tag,.work-image>span{border-radius:20px}
+.work-mock .client-tag{background:var(--grad)}
+.tags span{border-radius:20px;background:#f6f9fa}
+.svc-box.wide{border-top:0;background:linear-gradient(135deg,#fff3ea 0%,#fffaf6 50%,#eef6fa 100%)}
+.price-box.featured,.price-box.system{border-top:0;position:relative}
+.price-box.featured::before,.price-box.system::before,.svc-box.wide::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--grad)}
+.svc-box.wide{position:relative}
+.price{background:linear-gradient(120deg,#24343f,#3d6178);-webkit-background-clip:text;background-clip:text;color:transparent}
+.price small{-webkit-text-fill-color:var(--muted);color:var(--muted)}
+thead th{background:linear-gradient(120deg,#2f7ea3,#4aa5c6)}
+td:last-child{color:var(--orange)}
+
+/* ---------- お悩み ---------- */
+.worry-photo img{border-radius:24px}
+.worry-photo::after{background:var(--grad);opacity:.85;border-radius:24px}
+.worry-list li::before{border-color:var(--orange);border-radius:6px}
+.worry-answer strong{color:var(--ink)}
+
+/* ---------- 仕組みの流れ ---------- */
+.system-section{background:
+  radial-gradient(circle at 90% 10%,rgba(253,214,190,.6) 0,transparent 35%),
+  radial-gradient(circle at 5% 90%,rgba(214,236,246,.9) 0,transparent 40%),
+  #fbfdfe}
+.system-flow li{border:0;border-radius:var(--r);box-shadow:var(--shadow-s);overflow:hidden;background:rgba(255,255,255,.9)}
+.system-flow li::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--grad)}
+.system-flow li:not(:last-child)::after{border-color:var(--peach2)}
+.sf-who{background:#e8f3f8;color:var(--blue)}
+.sf-who.auto{background:var(--grad)}
+.system-board{background:linear-gradient(135deg,#fff 0%,#fff6ef 55%,#eaf4f9 100%);color:var(--ink);border-radius:28px;box-shadow:var(--shadow)}
+.board-copy p{color:#4b5a64}
+.board-sheet{box-shadow:0 24px 50px rgba(36,64,84,.14);border-radius:14px}
+.sheet-row.head{background:linear-gradient(120deg,#2f7ea3,#4aa5c6)}
+
+/* ---------- 選ばれる理由 ---------- */
+.feature-section{background:#fff}
+.feature-visual{background:linear-gradient(135deg,#fde4d4 0%,#fff3e8 45%,#dff0f8 100%)}
+.feature-visual::before{background:radial-gradient(circle at 70% 25%,rgba(255,255,255,.9) 0,transparent 45%)}
+.stack .shot{border-radius:14px;overflow:hidden;box-shadow:0 26px 50px rgba(36,64,84,.2)}
+.stack .tag{background:var(--grad);border-radius:30px;box-shadow:0 10px 24px rgba(238,113,72,.35)}
+.check-list li span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ---------- メッセージ・数字 ---------- */
+.message-section{background:
+  radial-gradient(circle at 100% 0%,rgba(214,236,246,.9) 0,transparent 40%),
+  radial-gradient(circle at 0% 100%,rgba(253,222,202,.8) 0,transparent 40%),
+  #fffaf6}
+.message-section::before{color:rgba(238,113,72,.06)}
+.message-photo img{border-radius:24px}
+.message-photo::before{border-radius:24px;border-color:var(--peach)}
+.message-sign b{color:var(--ink)}
+.numbers{border:0;border-radius:var(--r);box-shadow:var(--shadow-s);overflow:hidden}
+.numbers b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.numbers b small{-webkit-text-fill-color:var(--orange)}
+
+/* ---------- 制作実績 ---------- */
+.work-mock{background:radial-gradient(circle at 25% 15%,#ffffff 0,#fde6d8 40%,#e2f0f8 100%)}
+.mock-pc{box-shadow:0 26px 50px rgba(36,64,84,.22)}
+.mock-sp{border-color:#24343f;background:#24343f;box-shadow:0 18px 36px rgba(36,64,84,.3)}
+.work-client{color:var(--blue)}
+
+/* ---------- 流れ(STEP) ---------- */
+.process-section{background:linear-gradient(160deg,#eaf5fa 0%,#f8fbfc 45%,#fff3ea 100%);color:var(--ink)}
+.light-heading>p{color:var(--muted)!important}
+.process-step{background:#fff;border-radius:var(--r);padding:24px 20px 22px;box-shadow:var(--shadow-s);border-top:0!important}
+.process-step p{color:var(--muted)}
+.step-no{color:var(--orange)}
+.process-grid.pf .process-step::before{background:var(--grad)!important;height:4px!important;top:0!important;border-radius:var(--r) var(--r) 0 0}
+.process-step:not(:last-child):after{border-color:var(--peach2)!important;top:50%!important;right:-16px!important}
+.flow-badges span{color:var(--ink);background:#fff;border-color:transparent;box-shadow:var(--shadow-s)}
+.flow-badges span::before{color:var(--orange)}
+
+/* ---------- お問い合わせの帯 ---------- */
+.cta-band,.cta-band.cta-photo{background:
+  radial-gradient(circle at 12% 20%,rgba(255,255,255,.35) 0,transparent 35%),
+  radial-gradient(circle at 88% 80%,rgba(255,236,200,.45) 0,transparent 40%),
+  linear-gradient(120deg,#ee7148 0%,#f5995f 50%,#f4bd72 100%)}
+.cta-inner p{color:#fff}
+.cta-inner .section-kicker{background:none;color:#fff!important;-webkit-text-fill-color:#fff}
+.cta-points li{border-color:rgba(255,255,255,.7);border-radius:30px;background:rgba(255,255,255,.14)}
+.cta-band .button-primary{background:#fff;color:var(--orange);box-shadow:0 14px 30px rgba(160,70,30,.25)}
+.cta-band .button-primary:hover{background:#fff}
+.cta-band.cta-photo::before,.cta-band.cta-photo::after{opacity:.18!important}
+
+/* ---------- 料金の組み合わせ例 ---------- */
+.price-example{background:var(--grad);border-radius:var(--r);box-shadow:0 18px 40px rgba(238,113,72,.28)}
+.price-example .mini-label{background:none;color:#fff!important;-webkit-text-fill-color:#fff;opacity:.85}
+.price-example p{color:#fff}
+
+/* ---------- フッター ---------- */
+.site-footer{background:linear-gradient(160deg,#f3f8fb 0%,#fff6ef 100%);color:var(--ink);border-top:1px solid #edf0f1}
+.site-footer p{color:var(--muted)!important}
+.brand-footer .brand-text strong{color:var(--ink)}
+.brand-footer .brand-text small{color:var(--muted)}
+.footer-links{color:var(--muted)}
+.footer-links a:hover{color:var(--orange)}
+.footer-bottom{border-top-color:#e6ebed;color:var(--muted)}
+.floating-contact{background:var(--grad)!important;border-radius:40px!important;box-shadow:0 12px 26px rgba(238,113,72,.35)}
+
+@media(max-width:960px){
+  .process-step:not(:last-child):after{display:none}
+}
+@media(max-width:780px){
+  .hero-photo{padding:0 16px 16px}
+  .hero-slides{inset:0 16px 16px 16px!important;border-radius:24px}
+  .hero-photo figcaption{right:30px;bottom:30px}
+  .hero-dots{left:30px;top:22px;bottom:auto}
+  .hero-points div{font-size:11.5px}
+  .system-board{border-radius:20px}
+}
