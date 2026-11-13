@@ -76,3 +76,4 @@
 .trust-intro strong{font-size:22px!important}
 .trust-item{flex:1 1 260px;justify-content:center;background:var(--navy);color:#fff;font-size:17px!important;font-weight:700!important;padding:16px 22px;border-radius:999px;text-align:center}
 @media(max-width:860px){.trust-item{flex:1 1 100%;font-size:16px!important}}
+.trust-item{white-space:nowrap!important;padding:16px 14px!important}.trust-item span{white-space:nowrap}
