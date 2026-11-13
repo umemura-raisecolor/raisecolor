@@ -70,3 +70,9 @@
 .cta-points li{font-size:19px!important;font-weight:700!important;padding:14px 28px!important;background:#fff!important;color:var(--navy)!important;border:0!important;border-radius:999px!important;letter-spacing:.05em!important}
 .cta-points li::before{color:var(--orange)!important;font-size:19px!important}
 @media(max-width:860px){.cta-points li{font-size:17px!important;padding:12px 22px!important}}
+.trust-icon{display:none!important}
+.trust-inner{flex-wrap:wrap;padding:26px 0!important;gap:14px!important;justify-content:center!important}
+.trust-intro{width:100%;text-align:center;margin-bottom:4px}
+.trust-intro strong{font-size:22px!important}
+.trust-item{flex:1 1 260px;justify-content:center;background:var(--navy);color:#fff;font-size:17px!important;font-weight:700!important;padding:16px 22px;border-radius:999px;text-align:center}
+@media(max-width:860px){.trust-item{flex:1 1 100%;font-size:16px!important}}
