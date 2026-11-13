@@ -82,3 +82,7 @@
 .worry-list li{padding:14px 0!important;font-size:clamp(19px,1.7vw,23px)!important;font-weight:700!important;line-height:1.7}
 .worry-list li::before,.worry-list li::after{display:none!important}
 @media(max-width:780px){.worry-list li{font-size:18px!important}.worry-copy h2{font-size:28px!important}}
+.feature-list{list-style:none;padding:0;margin:34px 0 44px}
+.feature-list li{margin:0 0 30px;display:flex;flex-direction:column;gap:6px}
+.feature-list b{font-size:clamp(20px,1.9vw,25px);color:var(--navy);line-height:1.5;font-weight:700}
+.feature-list span{font-size:16px;color:#4d5d66;line-height:1.8}
