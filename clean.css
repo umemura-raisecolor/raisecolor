@@ -77,3 +77,8 @@
 .trust-item{flex:1 1 260px;justify-content:center;background:var(--navy);color:#fff;font-size:17px!important;font-weight:700!important;padding:16px 22px;border-radius:999px;text-align:center}
 @media(max-width:860px){.trust-item{flex:1 1 100%;font-size:16px!important}}
 .trust-item{white-space:nowrap!important;padding:16px 14px!important}.trust-item span{white-space:nowrap}
+.worry-copy h2{font-size:clamp(30px,3.4vw,42px)!important;margin:0 0 36px!important}
+.worry-list{margin:0!important}
+.worry-list li{padding:14px 0!important;font-size:clamp(19px,1.7vw,23px)!important;font-weight:700!important;line-height:1.7}
+.worry-list li::before,.worry-list li::after{display:none!important}
+@media(max-width:780px){.worry-list li{font-size:18px!important}.worry-copy h2{font-size:28px!important}}
