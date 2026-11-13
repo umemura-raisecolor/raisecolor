@@ -1,3 +1,102 @@
+/* ---- 全体の文字を大きく ---- */
+body{font-size:17px!important;line-height:1.95}
+body{font-size:17px!important}
+.topbar{font-size:15px!important}
+.brand-text small{font-size:15px!important}
+.site-nav{font-size:16px!important}
+.button{font-size:16px!important}
+.hero-photo figcaption small{font-size:15px!important}
+.eyebrow{font-size:15px!important}
+.hero-lead{font-size:17px!important}
+.hero-points div{font-size:15px!important}
+.hero-points b{font-size:15px!important}
+.breadcrumb{font-size:15px!important}
+.page-hero p{font-size:17px!important}
+.mini-label,.section-kicker{font-size:15px!important}
+.trust-item{font-size:16px!important}
+.trust-icon{font-size:15px!important}
+.section-heading>p{font-size:17px!important}
+.card-number{font-size:15px!important}
+.service-card p{font-size:16px!important}
+.text-link{font-size:15px!important}
+.stack .tag{font-size:15px!important}
+.feature-copy>p{font-size:17px!important}
+.check-list li{font-size:17px!important}
+.check-list li span{font-size:15px!important}
+.numbers span{font-size:16px!important}
+.work-image>span{font-size:15px!important}
+.work-info p{font-size:16px!important}
+.tags span{font-size:15px!important}
+.demo-note{font-size:15px!important}
+.step-no{font-size:15px!important}
+.process-step p{font-size:16px!important}
+.svc-box>p{font-size:17px!important}
+.svc-box li{font-size:16px!important}
+.price small{font-size:17px!important}
+.price-box .sub{font-size:16px!important}
+.price-box li{font-size:17px!important}
+table{font-size:17px!important}
+thead th{font-size:15px!important}
+.note-list{font-size:15px!important}
+.profile h2 .en{font-size:15px!important}
+.profile p{font-size:17px!important}
+.timeline li{font-size:17px!important}
+.timeline time{font-size:15px!important}
+.company th{font-size:16px!important}
+.contact-copy>p{font-size:17px!important}
+.contact-badges span{font-size:15px!important}
+.contact-label{font-size:15px!important}
+.contact-card .intro{font-size:16px!important}
+.contact-card li{font-size:17px!important}
+.contact-card li::before{font-size:15px!important}
+.contact-card small{font-size:15px!important}
+.faq summary{font-size:17px!important}
+.faq details p{font-size:17px!important}
+.cta-inner p{font-size:17px!important}
+.footer-main>p{font-size:15px!important}
+.footer-links{font-size:15px!important}
+.footer-bottom{font-size:15px!important}
+.thumb-tag{font-size:15px!important}
+.contact-form label{font-size:16px!important}
+.required{font-size:15px!important}
+.contact-form input,.contact-form select,.contact-form textarea{font-size:17px!important}
+.form-status{font-size:17px!important}
+.worry-photo figcaption{font-size:15px!important}
+.worry-list li{font-size:17px!important}
+.worry-answer{font-size:17px!important}
+.message-copy>p{font-size:17px!important}
+.message-sign small{font-size:15px!important}
+.process-photo figcaption{font-size:15px!important}
+.cta-points li{font-size:15px!important}
+.work-feature .work-info>p:not(.work-client){font-size:17px!important}
+.work-client{font-size:15px!important}
+.flow-badges span{font-size:15px!important}
+.work-points li{font-size:16px!important}
+.work-mock .client-tag{font-size:15px!important}
+.sf-no{font-size:15px!important}
+.sf-who{font-size:15px!important}
+.system-flow p{font-size:16px!important}
+.board-copy p{font-size:17px!important}
+.board-sheet{font-size:16px!important}
+.sheet-bar{font-size:15px!important}
+.sheet-note{font-size:15px!important}
+.svc-case{font-size:17px!important}
+.price-example p{font-size:17px!important}
+.cmp-row>*{font-size:17px!important}
+.cmp-row>b{font-size:16px!important}
+.cmp-head>*{font-size:17px!important}
+.case-head p{font-size:17px!important}
+td small{font-size:15px!important}
+@media(max-width:960px){.site-nav>a{font-size:15px!important}}
+@media(max-width:780px){body{font-size:16px!important}
+.topbar{font-size:15px!important}
+.site-nav>a{font-size:16px!important}
+.floating-contact{font-size:15px!important}
+.worry-list li{font-size:16px!important}
+.board-sheet{font-size:15px!important}
+.cmp-row>*{font-size:15px!important}
+.cmp-head>*{font-size:15px!important}}
+
 /* 装飾の線・矢印・英字の飾りを使わない(恵美さんの禁止リスト) */
 .hero-photo figcaption{border-left:0}
 .hero-points{border-top:0}
@@ -86,3 +185,42 @@
 .feature-list li{margin:0 0 30px;display:flex;flex-direction:column;gap:6px}
 .feature-list b{font-size:clamp(20px,1.9vw,25px);color:var(--navy);line-height:1.5;font-weight:700}
 .feature-list span{font-size:16px;color:#4d5d66;line-height:1.8}
+
+/* ---- 奥行き・動き ---- */
+.worry-photo,.message-photo{overflow:visible}
+.worry-photo img,.message-photo img{will-change:transform}
+.worry-photo,.message-photo{clip-path:none}
+.service-card,.work-card,.price-box,.plan-table{box-shadow:0 14px 36px rgba(16,43,57,.10)}
+.service-card,.work-card,.price-box{transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease}
+.service-card:hover,.work-card:hover,.price-box:hover{transform:translateY(-10px);box-shadow:0 30px 60px rgba(16,43,57,.2)}
+.work-card img,.service-card img{transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.work-card:hover img,.service-card:hover img{transform:scale(1.06)}
+.feature-list li{border-radius:0;padding:22px 26px;background:#fff;box-shadow:0 12px 30px rgba(16,43,57,.10);margin:0 0 20px}
+.feature-list li:nth-child(2){margin-left:28px}
+.feature-list li:nth-child(3){margin-left:56px}
+@media(max-width:780px){.feature-list li:nth-child(2),.feature-list li:nth-child(3){margin-left:0}}
+.worry-list li{transition:transform .5s ease}
+.worry-list li:hover{transform:translateX(10px)}
+.section-heading h2{font-size:clamp(30px,3.6vw,46px)}
+.zero-note{font-size:15px!important}
+.hero-points{max-width:none!important;gap:12px 36px!important}
+.hero-points div{font-size:18px!important}
+/* ---- 読ませる説明文を減らし、表と注釈も大きく ---- */
+.section-heading>p,.section-heading p{display:none!important}
+.plan-table th,.plan-table td{font-size:18px!important;padding:20px 22px!important}
+.plan-table thead th{font-size:17px!important}
+.plan-table td.yen{font-size:21px!important}
+.plan-table tbody th{font-size:18px!important}
+.plan-table td.note,.plan-table small{font-size:15px!important}
+.plan-table .rec{font-size:14px!important;padding:3px 10px!important}
+.cmp-row>*{font-size:17px!important;padding:20px 24px!important}
+.cmp-row>b{font-size:16px!important}
+.system-flow li p,.flow-card p{font-size:16px!important;line-height:1.85!important}
+.work-info p{font-size:17px!important}
+.page-hero p{font-size:19px!important;line-height:1.9!important;max-width:none!important}
+.footer-main,.footer-main a,.footer-main p,.footer-main li{font-size:16px!important}
+@media(max-width:780px){.plan-table th,.plan-table td{font-size:16px!important;padding:14px 10px!important}.plan-table td.yen{font-size:17px!important}.cmp-row>*{font-size:16px!important;padding:14px 14px!important}}
+.plan-table td.note,.plan-table td[colspan]{font-size:18px!important;font-weight:600!important;color:#193546!important}
+.system-flow li h3{font-size:21px!important;line-height:1.5}
+.system-flow li p{font-size:17px!important}
+.sf-who{font-size:14px!important}
