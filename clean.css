@@ -1,0 +1,62 @@
+/* 装飾の線・矢印・英字の飾りを使わない(恵美さんの禁止リスト) */
+.hero-photo figcaption{border-left:0}
+.hero-points{border-top:0}
+.page-hero::after{content:none!important}
+.text-link{border-top:0;padding-top:0}
+.check-list,.work-points,.svc-box ul,.price-box ul,.contact-card ol{border-top:0}
+.check-list li,.work-points li,.svc-box li,.price-box li,.contact-card li,.worry-list li{border-bottom:0}
+.process-step{border-top:0}
+.process-step:not(:last-child):after,.process-grid.pf .process-step::before,.process-grid.pf .process-step::after{display:none}
+.profile-photo::after,.message-photo::before,.rep-photo::after{display:none}
+.message-section::before{content:none}
+.hero-catch,.glass .thesis{border-left:0;padding-left:0}
+.worry-answer{border-left:0}
+.work-feature{border-top:1px solid var(--line)}
+.svc-box.wide,.price-box.featured,.price-box.system{border-top:0}
+.system-flow li{border-top:1px solid var(--line)}
+.system-flow li:not(:last-child)::after{display:none}
+.cmp-us{border-left:0}
+.timeline,.timeline.tl-flow{border-left:0}
+.timeline li,.career .timeline li{padding-left:0}
+.timeline li::before,.timeline.tl-flow>li::before,.timeline.tl-flow::after{display:none}
+.faq summary::before{content:none}
+.faq summary{padding-left:6px}
+.faq details,.faq details:first-child{border-top:0;border-bottom:0;background:#f6f4ee;margin-bottom:10px;border-radius:4px}
+.story .pull{border-top:0;border-bottom:0}
+.policy-item{border-top:0}
+.contact-card li::before{content:none}
+.contact-card li{padding-left:0}
+.zero-note{font-size:12px;color:#6b7a82;line-height:1.9;margin:22px 0 0}
+.plan-table{width:100%;border-collapse:collapse;background:#fff}
+.plan-table th,.plan-table td{padding:16px 18px;border-bottom:1px solid #e6e3da;text-align:left;vertical-align:top;font-size:14px;line-height:1.8}
+.plan-table thead th{background:#193546;color:#fff;font-weight:700;font-size:13px}
+.plan-table td.yen{font-family:"Noto Sans JP",sans-serif;font-weight:500;font-size:16px;color:#193546;white-space:nowrap}
+.plan-table .rec{display:inline-block;margin-left:8px;padding:1px 9px;background:#e66d3d;color:#fff;font-size:11px;font-weight:700;border-radius:2px;vertical-align:middle}
+.plan-table td.note{font-size:12.5px;color:#5d6b73}
+.price-glance .glance-wrap{max-width:880px;margin:0 auto}
+.price-glance .more{margin-top:20px;font-size:14px;font-weight:700}
+.price-glance .more a{color:#275b73;text-decoration:underline;text-underline-offset:4px}
+.works-grid{grid-template-columns:repeat(2,1fr)}
+@media(max-width:780px){.works-grid{grid-template-columns:1fr}.plan-table th,.plan-table td{padding:12px 10px;font-size:13px}.plan-table td.yen{font-size:14px}}
+/* 文字の下の線(マーカー線)を使わない */
+.hero h1 em{background:none!important;animation:none!important}
+.worry-answer strong{background:none}
+/* 料金表 */
+.plan-table{table-layout:fixed}
+.plan-table th:first-child{width:34%}
+.plan-table th:nth-child(2){width:26%}
+.plan-table th:nth-child(3){width:40%}
+.plan-table tbody th{background:#fff;color:#193546;font-size:14px;font-weight:700;border-bottom:1px solid #e6e3da}
+.plan-table tbody th small{font-weight:400;color:#5d6b73;font-size:12px}
+.plan-table td{background:#fff;border-bottom:1px solid #e6e3da}
+.plan-table td.yen{width:auto}
+/* ページ内の<style>にも勝たせる */
+.glass .thesis{border-left:0!important;padding-left:0!important}
+.story .pull{border-top:0!important;border-bottom:0!important}
+.policy-item{border-top:0!important}
+.rep-photo::after{display:none!important}
+.plan-table tbody tr:last-child td{border-bottom:1px solid #e6e3da!important}
+/* お悩みの写真:横長の写真を縦に切り出すとき、人物が入るように右寄りに */
+.worry-photo img{object-position:80% 30%}
+.message-photo img{object-position:center 40%}
+@media(max-width:780px){.worry-photo img{object-position:center}}
