@@ -459,3 +459,16 @@ td small{font-size:15px!important}
 .compare-table{max-width:none!important}
 .faq{max-width:1300px!important}
 .glance-wrap{max-width:1300px!important}
+
+/* ---- 赤い装飾の線・チェックマークを全て削除(2026-11-14) ---- */
+.process-section .process-step h3::before,.care-title::after,.care-card h3::after,.msg-eyebrow::after,.worry-section .worry-copy h2::after,
+.worry-section .worry-photo::before,.worry-section .worry-photo::after,.eyebrow span,.profile-photo::after,.message-photo::before{content:none!important;display:none!important}
+.process-section .process-step h3{padding-top:0!important}
+.care-title{padding-bottom:0!important}
+.care-card h3{padding-bottom:0!important}
+.worry-section .worry-text{border-left:0!important;padding-left:0!important}
+.hero-catch,.hero-photo figcaption,.worry-answer,.cmp-us{border-left:0!important}
+.price-box.featured,.price-box.system,.svc-box.wide,.work-feature{border-top:0!important}
+.flow-badges span::before,.price-box li::before,.work-points li::before{content:none!important;display:none!important}
+.price-box li,.work-points li{padding-left:0!important}
+.trust-icon{display:none!important}
