@@ -485,3 +485,13 @@ td small{font-size:15px!important}
   .hero h1{font-size:clamp(28px,7.6vw,36px)!important;white-space:normal!important}
   .hero h1 .ph{display:inline-block}
 }
+
+/* お悩みセクションの写真を大きく目立たせる */
+.worry-section .worry-grid{grid-template-columns:minmax(0,.86fr) minmax(0,1fr)!important;gap:clamp(40px,4vw,64px)!important}
+.worry-section .worry-photo{margin:0 0 0 40px!important}
+.worry-section .worry-photo img{aspect-ratio:4/5.1;border-radius:6px;box-shadow:-44px 30px 0 -10px #f3e3d2,0 36px 70px -18px rgba(60,35,20,.38)!important;transform:scale(1);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.worry-section .worry-photo:hover img{transform:scale(1.025)}
+@media(max-width:780px){
+  .worry-section .worry-photo{max-width:none;margin:0 14px 0 30px!important}
+  .worry-section .worry-photo img{aspect-ratio:4/4.8;box-shadow:-26px 20px 0 -8px #f3e3d2,0 24px 44px -14px rgba(60,35,20,.35)!important}
+}
