@@ -401,7 +401,7 @@ td small{font-size:15px!important}
 .process-grid.pf-in .process-step{opacity:1;transform:none}
 .process-grid.pf-in .process-step:hover{transform:translateY(-6px);transition-delay:0s}
 @keyframes stepGlow{0%,16%,100%{box-shadow:0 0 0 rgba(230,109,61,0);border-color:rgba(255,255,255,.85)}6%{box-shadow:0 0 28px rgba(230,109,61,.5);border-color:#f0a684}}
-.process-grid.pf-in .process-step{animation:stepGlow 10s ease-in-out infinite;animation-delay:calc(var(--i)*1.4s + 2.5s)}
+.process-grid.pf-in .process-step{animation:none;animation-delay:calc(var(--i)*1.4s + 2.5s)}
 /* サービスページのあちこちの動き */
 .svc-card{transition:opacity .9s ease,transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s ease}
 .svc-card.in:hover{transform:translateY(-8px);box-shadow:0 26px 50px rgba(29,43,53,.14);transition-delay:0s}
@@ -433,8 +433,20 @@ td small{font-size:15px!important}
 .process-section .process-step p{text-wrap:pretty;word-break:auto-phrase}
 @media(max-width:860px){.svc-strength .numbers>div{border-bottom:0!important}.process-section .process-step h3{font-size:22px!important}}
 
-/* ---- 各ページ下の相談帯:薄暗い写真の背景(2026-11-14) ---- */
-.cta-band:not(.cta-photo){position:relative;overflow:hidden;isolation:isolate;background:#142c39!important;padding:84px 0!important}
-.cta-band:not(.cta-photo)::before{content:"";position:absolute;inset:-8px;background:url(cta-room.jpg) center 62%/cover no-repeat;filter:blur(1.5px);z-index:-2;animation:ctaDrift 24s ease-in-out infinite alternate}
-.cta-band:not(.cta-photo)::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,30,42,.92) 0%,rgba(12,30,42,.78) 55%,rgba(12,30,42,.66) 100%);z-index:-1}
-@keyframes ctaDrift{from{transform:scale(1)}to{transform:scale(1.07)}}
+/* ---- 各ページ下の相談帯:大きな薄暗い写真の背景(2026-11-14 画像どおり) ---- */
+.cta-band:not(.cta-photo){position:relative;overflow:hidden;isolation:isolate;background:#1a2229!important;padding:96px 0!important;min-height:clamp(380px,40vw,580px);display:flex;align-items:center}
+.cta-band:not(.cta-photo)>.container{margin-left:auto;margin-right:auto}
+.cta-band:not(.cta-photo)::before{content:"";position:absolute;inset:-6px;background:url(cta-room.jpg) center 72%/cover no-repeat;filter:grayscale(.75) brightness(.5) contrast(1.08);z-index:-2;animation:ctaDrift 26s ease-in-out infinite alternate}
+.cta-band:not(.cta-photo)::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,22,30,.5) 0%,rgba(10,22,30,.28) 60%,rgba(10,22,30,.12) 100%);z-index:-1}
+.cta-band:not(.cta-photo) h2,.cta-band:not(.cta-photo) p{text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.cta-band:not(.cta-photo) h2{font-size:clamp(26px,3vw,42px)!important}
+@keyframes ctaDrift{from{transform:scale(1)}to{transform:scale(1.06)}}
+@media(max-width:860px){.cta-band:not(.cta-photo){padding:72px 0!important;min-height:420px}}
+
+/* ---- ご依頼から公開まで:クリーム色のカード(2026-11-14 画像どおり) ---- */
+.process-section .process-step{background:#f6f0e4!important;border:0!important;border-radius:3px;text-align:left!important;padding:26px 26px 28px!important;box-shadow:0 12px 30px rgba(0,0,0,.22);animation:none!important}
+.process-section .process-step:hover{background:#fbf6ec!important}
+.process-section .process-step h3{color:#2b2623!important;font-size:clamp(20px,1.95vw,28px)!important;margin:0 0 12px!important;position:relative;padding-top:16px}
+.process-section .process-step h3::before{content:"";position:absolute;left:0;top:0;width:56px;height:2px;background:var(--orange);transform-origin:left;transform:scaleX(0);transition:transform .7s ease .5s}
+.process-grid.pf-in .process-step h3::before{transform:none}
+.process-section .process-step p{color:#3b3733!important;font-size:clamp(15px,1.3vw,19px)!important}
