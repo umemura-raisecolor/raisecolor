@@ -543,3 +543,4 @@ td small{font-size:15px!important}
 .policy-item p{font-size:clamp(16px,1.25vw,18px)!important;line-height:1.8!important}
 .policy-item{text-align:center!important}
 .policy-item h3,.policy-item p{text-align:center!important;text-wrap:balance}
+.policy-item p{text-wrap:nowrap}@media(max-width:560px){.policy-item p{text-wrap:balance}}
