@@ -355,3 +355,18 @@ td small{font-size:15px!important}
   .sys-line{flex-basis:18px;margin-top:34px}
 }
 @media(max-width:860px){.sys-band h2{font-size:25px;letter-spacing:.02em;margin-bottom:16px}}
+
+/* ---- 公開したあとも(2026-11-14 画像どおり) ---- */
+.svc-care{padding:72px 0 80px!important}
+.care-title{font-family:var(--serif);font-weight:600;font-size:clamp(28px,3.6vw,50px);text-align:center;color:#1d2b35;margin:0 0 56px;letter-spacing:.04em;position:relative;padding-bottom:30px}
+.care-title::after{content:"";position:absolute;left:50%;bottom:0;width:104px;height:2px;margin-left:-52px;background:var(--orange)}
+.care-card h3{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:clamp(24px,2.5vw,34px);margin:24px 14px 18px;padding-bottom:20px;position:relative}
+.care-card h3::after{content:"";position:absolute;left:0;bottom:0;width:50px;height:2px;background:var(--orange)}
+.care-ico{width:clamp(36px,3.4vw,48px);height:auto;flex:none}
+.care-card h3 small{font-family:var(--sans);font-size:clamp(14px,1.2vw,17px);font-weight:500;color:#5b6670;border-left:1.5px solid #cfd3d6;padding-left:16px;margin-left:4px;line-height:1.4}
+.care-card>p{font-size:17px}
+.care-card li{padding:10px 0 10px 32px;font-weight:500}
+@media(max-width:860px){.svc-care{padding:48px 0 56px!important}.care-title{margin-bottom:34px;font-size:24px;padding-bottom:22px}}
+.care-card h3{flex-wrap:nowrap!important;font-size:clamp(21px,2.1vw,30px)!important}
+.care-card h3 small{white-space:nowrap}
+@media(max-width:860px){.care-title{font-size:21px}.care-card h3{flex-wrap:wrap!important;font-size:24px!important}}
