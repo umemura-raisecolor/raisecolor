@@ -4,7 +4,7 @@
   var hd=document.querySelector('.site-header');
   function sc(){if(hd)hd.classList.toggle('rc-scrolled',window.scrollY>20);}
   window.addEventListener('scroll',sc,{passive:true});sc();
-  var groups=[['.section-heading','',false],['.trust-intro','rv-l',false],['.trust-item','',true],['.system-flow li','',true],['.cmp-row','',true],['.case-head','',false],['.board-copy','rv-l',false],['.board-sheet','rv-r',false],['.service-card','',true],['.feature-copy','rv-r',false],['.feature-visual .stack','rv-l',false],['.check-list li','',true],['.feature-list li','',true],['.work-card','',true],['.work-feature','',false],['.price-box','',true],['.cta-inner','',false],['.worry-photo','rv-l',false],['.worry-copy','rv-r',false],['.worry-list li','',true],['.message-copy','rv-l',false],['.message-photo','rv-r',false],['.about-grid,.profile,.page-hero .container,.content-block,.faq-item,.plan,.contact-grid > *,.info-table','',true],['.story > p','',false],['.fact','',true],['.policy-item','',true],['.personal','',false]];
+  var groups=[['.section-heading','',false],['.trust-intro','rv-l',false],['.trust-item','',true],['.system-flow li','',true],['.cmp-row','',true],['.case-head','',false],['.board-copy','rv-l',false],['.board-sheet','rv-r',false],['.service-card','',true],['.feature-copy','rv-r',false],['.feature-visual .stack','rv-l',false],['.check-list li','',true],['.feature-list li','',true],['.work-card','',true],['.work-feature','',false],['.price-box','',true],['.cta-inner','',false],['.worry-photo','rv-l',false],['.worry-copy','rv-r',false],['.worry-list li','',true],['.message-copy','rv-l',false],['.message-photo','rv-r',false],['.about-grid,.profile,.page-hero .container,.content-block,.faq-item,.plan,.contact-grid > *,.info-table','',true],['.story > p','',false],['.fact','',true],['.policy-item','',true],['.personal','',false],['.svc-card','',true],['.sys-band h2','',false],['.sys-item','',true],['.care-title','',false],['.svc-strength .section-heading','',false],['.svc-strength .numbers>div','',true],['.zero-note','',false],['.process-section .section-heading','',false]];
   var els=[];
   groups.forEach(function(g){var list=document.querySelectorAll(g[0]);list.forEach(function(el,i){if(el.closest('.hero')||el.closest('.rep-hero'))return;el.classList.add('rv');if(g[1])el.classList.add(g[1]);if(g[2])el.style.setProperty('--n',i%5);els.push(el);});});
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
@@ -70,4 +70,14 @@
   if(!imgs.length)return;
   function f(){var vh=window.innerHeight;imgs.forEach(function(im){var r=im.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;var c=(r.top+r.height/2-vh/2)/vh;im.style.transform='translateY('+(c*-28).toFixed(1)+'px) scale(1.08)';});}
   window.addEventListener('scroll',f,{passive:true});window.addEventListener('resize',f);f();
+})();
+
+
+/* 画面に入ったら動き出す部品(0円のポン、予約の流れの線) */
+(function(){
+  var els=document.querySelectorAll('.zero-pop,.sys-flow');
+  if(!els.length)return;
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.5});
+  els.forEach(function(e){io.observe(e);});
 })();
