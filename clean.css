@@ -260,3 +260,41 @@ td small{font-size:15px!important}
   .worry-section .worry-ico{width:38px;height:38px}
   .worry-section .worry-list li{font-size:18px!important;gap:16px}
 }
+
+/* ---- ライズカラーの想い(2026-11-14 画像どおりに作り直し) ---- */
+.message-section{background:#fff!important;padding:88px 0 80px!important}
+.message-section .container{max-width:1280px}
+.message-section .msg-eyebrow{display:flex;align-items:center;gap:22px;margin:0 0 18px;color:#c4441a;font-family:var(--serif);font-weight:600;font-size:clamp(18px,1.6vw,22px);letter-spacing:.08em}
+.message-section .msg-eyebrow::after{content:"";width:80px;height:1.5px;background:#c4441a}
+.message-section .msg-title{font-family:var(--serif);font-weight:600;font-size:clamp(26px,3vw,43px)!important;line-height:1.45;letter-spacing:.02em;margin:0 0 48px!important;color:#2b2623;white-space:nowrap}
+.message-section .sp-br{display:none}
+.message-section .message-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,1fr)!important;gap:clamp(40px,4vw,64px)!important;align-items:center}
+.message-section .message-copy>p{font-size:clamp(17px,1.35vw,20px)!important;line-height:2.1;color:#2b2623;margin:0 0 30px}
+.message-section .message-sign{margin:48px 0 0}
+.message-section .message-sign small{font-size:15px!important;color:#2b2623;letter-spacing:.04em}
+.message-section .message-sign b{display:block;margin-top:6px;font-family:var(--serif);font-size:clamp(28px,2.6vw,36px);letter-spacing:.12em;color:#2b2623}
+.message-section .message-photo img{aspect-ratio:3/2;width:100%;object-fit:cover;object-position:center 80%!important;box-shadow:none!important;display:block}
+.message-section .message-numbers{margin:64px 0 0!important;border:0!important;border-top:1px solid #e6e0d8!important;background:none!important;padding-top:44px}
+.message-section .message-numbers>div{padding:6px 16px!important;border-right:1px solid #e6e0d8!important;text-align:center}
+.message-section .message-numbers>div:last-child{border-right:0!important}
+.message-section .message-numbers b{display:flex;justify-content:center;align-items:baseline;gap:10px;line-height:1.1;color:#2b2623}
+.message-section .message-numbers b .cnt{font-family:var(--serif);font-weight:500;font-size:clamp(64px,9vw,120px)!important;color:#c4441a;letter-spacing:-.02em;font-variant-numeric:lining-nums}
+.message-section .message-numbers b small{font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.2vw,46px)!important;margin:0;color:#2b2623}
+.message-section .message-numbers>div>span{display:block;margin-top:12px;font-size:clamp(15px,1.5vw,22px)!important;letter-spacing:.14em;color:#4a4440}
+@media(max-width:900px){
+  .message-section{padding:60px 0 56px!important}
+  .message-section .msg-title{white-space:normal;font-size:30px!important;margin-bottom:32px!important}
+  .message-section .sp-br{display:inline}
+  .message-section .message-grid{grid-template-columns:1fr!important;gap:32px!important}
+  .message-section .message-photo{order:2;max-width:none;margin:0!important}
+  .message-section .message-sign{margin-top:32px}
+  .message-section .message-numbers{margin-top:44px!important;padding-top:32px}
+  .message-section .message-numbers>div{padding:4px 4px!important}
+  .message-section .message-numbers b{gap:4px;flex-wrap:nowrap}
+  .message-section .message-numbers{grid-template-columns:repeat(3,1fr)!important}
+  .message-section .message-numbers>div{border-right:1px solid #e6e0d8!important;border-bottom:0!important}
+  .message-section .message-numbers>div:last-child{border-right:0!important}
+  .message-section .message-numbers b .cnt{font-size:clamp(40px,11vw,60px)!important}
+  .message-section .message-numbers b small{font-size:clamp(13px,3.8vw,20px)!important}
+  .message-section .message-numbers>div>span{font-size:13px!important;letter-spacing:.04em;line-height:1.5}
+}
