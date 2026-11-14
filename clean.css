@@ -474,3 +474,14 @@ td small{font-size:15px!important}
 .trust-icon{display:none!important}
 .process-section .process-step{text-align:center!important}
 .process-section .process-step h3{text-align:center}
+
+/* トップ見出しを1行に */
+@media(min-width:861px){
+  .hero-content{container-type:inline-size}
+  .hero h1{white-space:nowrap!important;font-size:clamp(26px,5.6cqw,64px)!important}
+  .hero h1 .ln{overflow:visible}
+}
+@media(max-width:860px){
+  .hero h1{font-size:clamp(28px,7.6vw,36px)!important;white-space:normal!important}
+  .hero h1 .ph{display:inline-block}
+}
