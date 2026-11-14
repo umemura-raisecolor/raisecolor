@@ -541,3 +541,5 @@ td small{font-size:15px!important}
 .glass .thesis .ph{display:inline-block}
 .policy-item h3{font-size:clamp(22px,1.8vw,26px)!important}
 .policy-item p{font-size:clamp(16px,1.25vw,18px)!important;line-height:1.8!important}
+.policy-item{text-align:center!important}
+.policy-item h3,.policy-item p{text-align:center!important;text-wrap:balance}
