@@ -81,3 +81,4 @@
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.5});
   els.forEach(function(e){io.observe(e);});
 })();
+(function(){var g=document.querySelector('.diff-grid');if(!g)return;[].slice.call(g.querySelectorAll('.svc-box')).forEach(function(c,i){c.style.setProperty('--n',i)});if(!('IntersectionObserver' in window)){g.classList.add('in');return;}var o=new IntersectionObserver(function(es){if(es[0].isIntersecting){g.classList.add('in');o.disconnect();}},{threshold:.15});o.observe(g);})();
