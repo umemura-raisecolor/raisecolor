@@ -472,3 +472,5 @@ td small{font-size:15px!important}
 .flow-badges span::before,.price-box li::before,.work-points li::before{content:none!important;display:none!important}
 .price-box li,.work-points li{padding-left:0!important}
 .trust-icon{display:none!important}
+.process-section .process-step{text-align:center!important}
+.process-section .process-step h3{text-align:center}
