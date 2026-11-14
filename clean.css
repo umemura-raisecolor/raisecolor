@@ -224,3 +224,39 @@ td small{font-size:15px!important}
 .system-flow li h3{font-size:21px!important;line-height:1.5}
 .system-flow li p{font-size:17px!important}
 .sf-who{font-size:14px!important}
+
+/* ---- お悩みセクション(2026-11-14 画像どおりに作り直し) ---- */
+.worry-section{background:#fcfaf7!important;padding:96px 0!important}
+.worry-section .container{max-width:1280px}
+.worry-section .worry-grid{grid-template-columns:minmax(0,.6fr) minmax(0,1fr)!important;gap:clamp(44px,4.4vw,72px)!important;align-items:center!important}
+.worry-section .worry-photo{margin:0 0 0 36px!important;position:relative;z-index:0}
+.worry-section .worry-photo img{aspect-ratio:4/5;width:100%;object-fit:cover;object-position:center 30%!important;box-shadow:-49px 0 0 -14px #f6eee4!important;display:block}
+.worry-section .worry-photo::before,.worry-section .worry-photo::after{content:"";position:absolute;z-index:1;background:none!important;width:104px;height:116px;border:0 solid #c4441a;pointer-events:none}
+.worry-section .worry-photo::before{left:-18px;top:-18px;right:auto;bottom:auto;border-top-width:1.5px;border-left-width:1.5px}
+.worry-section .worry-photo::after{right:-18px;bottom:-18px;left:auto;top:auto;border-bottom-width:1.5px;border-right-width:1.5px}
+.worry-section .worry-copy h2{display:flex;align-items:center;gap:28px;font-size:clamp(28px,3vw,40px)!important;line-height:1.5;margin:0 0 38px!important;color:#2b2623;white-space:nowrap}
+.worry-section .worry-copy h2::after{content:"";flex:1;height:1.5px;background:#c4441a;min-width:24px}
+.worry-section .sp-br{display:none}
+.worry-section .worry-list{display:grid;grid-template-columns:1fr 1fr;column-gap:28px;background:#faf4ec;padding:12px 26px!important;margin:0!important;list-style:none}
+.worry-section .worry-list li{display:flex;align-items:center;gap:18px;padding:30px 4px!important;border-bottom:1px solid #eadfd2!important;font-size:clamp(18px,1.55vw,22px)!important;font-weight:500!important;line-height:1.7;color:#2b2623;transform:none!important;transition:none;white-space:nowrap}
+.worry-section .worry-list li:nth-child(n+5){border-bottom:0!important}
+.worry-section .worry-ico{flex:none;width:44px;height:44px;color:#c4441a}
+.worry-section .worry-text{display:block;border-left:1.5px solid #c4441a;padding:4px 0 4px 20px}
+.worry-section .worry-text b{font-weight:600;color:#c4441a}
+@media(max-width:1100px){
+  .worry-section .worry-list{grid-template-columns:1fr;padding:6px 24px!important}
+  .worry-section .worry-list li:nth-child(n+5){border-bottom:1px solid #eadfd2!important}
+  .worry-section .worry-list li:last-child{border-bottom:0!important}
+  .worry-section .worry-list li{padding:22px 4px!important}
+}
+@media(max-width:860px){
+  .worry-section{padding:64px 0!important}
+  .worry-section .worry-grid{grid-template-columns:1fr!important;gap:44px!important}
+  .worry-section .worry-photo{max-width:440px;margin:0 18px 0 36px!important}
+  .worry-section .worry-photo img{aspect-ratio:4/4.4}
+  .worry-section .worry-copy h2{white-space:normal;font-size:26px!important;margin-bottom:26px!important}
+  .worry-section .worry-copy h2::after{display:none}
+  .worry-section .sp-br{display:inline}
+  .worry-section .worry-ico{width:38px;height:38px}
+  .worry-section .worry-list li{font-size:18px!important;gap:16px}
+}
